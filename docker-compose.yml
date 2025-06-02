@@ -1,0 +1,10 @@
+version: '3'
+services:
+  wallpaperhub:
+    build: .
+    container_name: wallpaper_hub
+    ports:
+      - "8080:80"
+    volumes:
+      - ./wallpapers:/usr/share/nginx/html/wallpapers
+

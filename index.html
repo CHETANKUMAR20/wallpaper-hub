@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4K Wallpaper Hub</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #111;
+      color: #fff;
+    }
+
+    header, footer {
+      background-color: #222;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .wallpapers {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1rem;
+      padding: 2rem;
+    }
+
+    .wallpaper {
+      background-color: #1f1f1f;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .wallpaper img {
+      width: 100%;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .wallpaper img:hover {
+      transform: scale(1.03);
+    }
+
+    .wallpaper h3 {
+      margin-top: 0.5rem;
+    }
+
+    .wallpaper p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    .download {
+      display: inline-block;
+      margin-top: 0.5rem;
+      background-color: #ff4081;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .floating-buttons {
+      position: fixed;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      z-index: 1000;
+    }
+
+    .floating-buttons a {
+      background-color: #444;
+      color: white;
+      padding: 0.5rem 1rem;
+      text-decoration: none;
+      border-radius: 0 5px 5px 0;
+      transition: background 0.3s;
+    }
+
+    .floating-buttons a:hover {
+      background-color: #ff4081;
+    }
+
+    section {
+      padding: 2rem;
+    }
+
+    h2 {
+      border-bottom: 2px solid #ff4081;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Fullscreen modal overlay */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.95);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 90vw;
+      max-height: 90vh;
+      border-radius: 10px;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 30px;
+      color: white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>4K Wallpaper Hub</h1>
+    <p>Stunning 4K wallpapers in different categories. Click to preview fullscreen or download.</p>
+    <p>Resolution: 3840×2160 (4K UHD)</p>
+  </header>
+
+  <!-- Floating sidebar buttons only -->
+  <div class="floating-buttons">
+    <a href="#nature">Nature</a>
+    <a href="#art">Art</a>
+    <a href="#vehicles">Vehicles</a>
+    <a href="#spiritual">Spiritual</a>
+    <a href="#food">Food</a>
+  </div>
+
+  <!-- Nature Section -->
+  <section id="nature">
+    <h2>Nature</h2>
+    <div class="wallpapers">
+      <div class="wallpaper">
+        <img src="wallpapers/Boat_On_Sea.webp" alt="Boat on Sea" onclick="openModal(this.src)">
+        <h3>Boat on Sea</h3>
+        <p>Tranquil view of a boat floating peacefully on calm waters.</p>
+        <a class="download" href="wallpapers/Boat_On_Sea.webp" target="_blank">Download</a>
+      </div>
+      <div class="wallpaper">
+        <img src="wallpapers/sunset.webp" alt="Sunset" onclick="openModal(this.src)">
+        <h3>Sunset Glow</h3>
+        <p>Golden hues painting the sky during sunset.</p>
+        <a class="download" href="wallpapers/sunset.webp" target="_blank">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Art Section -->
+  <section id="art">
+    <h2>Art</h2>
+    <div class="wallpapers">
+      <div class="wallpaper">
+        <img src="wallpapers/Art.webp" alt="Abstract Art" onclick="openModal(this.src)">
+        <h3>Abstract Colors</h3>
+        <p>Modern digital artwork full of vibrant expression.</p>
+        <a class="download" href="wallpapers/Art.webp" target="_blank">Download</a>
+      </div>
+      <div class="wallpaper">
+        <img src="wallpapers/robot.webp" alt="Futuristic Robot" onclick="openModal(this.src)">
+        <h3>Futuristic Robot</h3>
+        <p>Conceptual futuristic art of a humanoid machine.</p>
+        <a class="download" href="wallpapers/robot.webp" target="_blank">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vehicles Section -->
+  <section id="vehicles">
+    <h2>Vehicles</h2>
+    <div class="wallpapers">
+      <div class="wallpaper">
+        <img src="wallpapers/red_bmw.webp" alt="Red BMW" onclick="openModal(this.src)">
+        <h3>Red BMW</h3>
+        <p>Luxury in motion — sharp, sleek, and stunning.</p>
+        <a class="download" href="wallpapers/red_bmw.webp" target="_blank">Download</a>
+      </div>
+      <div class="wallpaper">
+        <img src="wallpapers/Porche_GT3.webp" alt="Porsche GT3" onclick="openModal(this.src)">
+        <h3>Porsche GT3</h3>
+        <p>Performance and design in one beautiful machine.</p>
+        <a class="download" href="wallpapers/Porche_GT3.webp" target="_blank">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spiritual Section -->
+  <section id="spiritual">
+    <h2>Spiritual</h2>
+    <div class="wallpapers">
+      <div class="wallpaper">
+        <img src="wallpapers/Ancient_Indian_Temple.webp" alt="Ancient Indian Temple" onclick="openModal(this.src)">
+        <h3>Ancient Indian Temple</h3>
+        <p>Peaceful architecture filled with centuries of devotion.</p>
+        <a class="download" href="wallpapers/Ancient_Indian_Temple.webp" target="_blank">Download</a>
+      </div>
+      <div class="wallpaper">
+        <img src="wallpapers/krishna_Rukmini.webp" alt="Krishna and Rukmini" onclick="openModal(this.src)">
+        <h3>Krishna & Rukmini</h3>
+        <p>Divine love portrayed in vibrant colors and serenity.</p>
+        <a class="download" href="wallpapers/krishna_Rukmini.webp" target="_blank">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Food Section -->
+  <section id="food">
+    <h2>Food</h2>
+    <div class="wallpapers">
+      <div class="wallpaper">
+        <img src="wallpapers/Burger_FrenchFries.webp" alt="Burger and Fries" onclick="openModal(this.src)">
+        <h3>Burger & Fries</h3>
+        <p>Juicy fast food combo with crispy fries and a burger.</p>
+        <a class="download" href="wallpapers/Burger_FrenchFries.webp" target="_blank">Download</a>
+      </div>
+      <div class="wallpaper">
+        <img src="wallpapers/WadaPav.webp" alt="Wada Pav" onclick="openModal(this.src)">
+        <h3>Wada Pav</h3>
+        <p>Mumbai's favorite street snack captured beautifully.</p>
+        <a class="download" href="wallpapers/WadaPav.webp" target="_blank">Download</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About and Footer -->
+  <section>
+    <h2>About</h2>
+    <p>Explore stunning handpicked 4K wallpapers categorized for your convenience. Regularly updated with high-quality visuals.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 4K Wallpaper Hub. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal Preview -->
+  <div class="modal" id="imageModal" onclick="closeModal()">
+    <span class="modal-close">&times;</span>
+    <img id="modalImg" src="">
+  </div>
+
+  <script>
+    function openModal(src) {
+      document.getElementById('modalImg').src = src;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+
+    // Also close modal when pressing ESC key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === "Escape") closeModal();
+    });
+  </script>
+
+</body>
+</html>

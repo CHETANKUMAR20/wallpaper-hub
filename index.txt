@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>4K Wallpapers Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #0f172a;
+    }
+  </style>
+</head>
+<body class="text-white font-sans">
+  <header class="bg-gray-900 p-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">4K Wallpapers</h1>
+      <nav class="space-x-4">
+        <a href="#latest" class="hover:text-green-400">Latest</a>
+        <a href="#categories" class="hover:text-green-400">Categories</a>
+        <a href="#subscribe" class="hover:text-green-400">Subscribe</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="text-center py-10 bg-gradient-to-b from-gray-900 to-gray-800">
+    <h2 class="text-4xl font-bold mb-4">Stunning 4K Wallpapers</h2>
+    <p class="text-gray-400">Download high-resolution wallpapers for free in various categories</p>
+  </section>
+
+  <section id="latest" class="px-6 py-10">
+    <h3 class="text-3xl font-semibold mb-6 text-center">Latest Wallpapers</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <!-- Example Wallpaper Cards -->
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="wallapers/BlackCat.webp" alt="Black Cat" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full">Download</button>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="wallapers/Bali_French_Polynesia.webp" alt="Bali Beach" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full">Download</button>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="wallapers/Flower.webp" alt="Flower" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full">Download</button>
+        </div>
+      </div>
+      <div class="bg-gray-800 rounded-lg overflow-hidden shadow-lg">
+        <img src="wallapers/Porche_GT3.webp" alt="Porche GT3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <button class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600 w-full">Download</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="categories" class="px-6 py-10 bg-gray-900">
+    <h3 class="text-3xl font-semibold mb-6 text-center">Sub-Categories</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+      <a href="#nature" class="bg-gray-700 p-4 rounded-lg hover:bg-green-500 transition">Nature</a>
+      <a href="#vehicles" class="bg-gray-700 p-4 rounded-lg hover:bg-green-500 transition">Vehicles</a>
+      <a href="#people" class="bg-gray-700 p-4 rounded-lg hover:bg-green-500 transition">People</a>
+      <a href="#art" class="bg-gray-700 p-4 rounded-lg hover:bg-green-500 transition">Art</a>
+    </div>
+  </section>
+
+  <section id="nature" class="px-6 py-10">
+    <h3 class="text-2xl font-semibold mb-6">Nature</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="wallapers/Boat_On_Sea.webp" alt="Boat" class="rounded-lg">
+      <img src="wallapers/Desert_Lifestyle.webp" alt="Desert" class="rounded-lg">
+      <img src="wallapers/Sunflower.webp" alt="Sunflower" class="rounded-lg">
+      <img src="wallapers/earth_sea.webp" alt="Earth & Sea" class="rounded-lg">
+    </div>
+  </section>
+
+  <section id="vehicles" class="px-6 py-10 bg-gray-800">
+    <h3 class="text-2xl font-semibold mb-6">Vehicles</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="wallapers/Porche_GT3.webp" alt="Porche" class="rounded-lg">
+      <img src="wallapers/bugatti_chiron.webp" alt="Bugatti" class="rounded-lg">
+      <img src="wallapers/red_bmw.webp" alt="Red BMW" class="rounded-lg">
+      <img src="wallapers/mustang.webp" alt="Mustang" class="rounded-lg">
+    </div>
+  </section>
+
+  <section id="people" class="px-6 py-10">
+    <h3 class="text-2xl font-semibold mb-6">People</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="wallapers/cute_Girl.webp" alt="Girl" class="rounded-lg">
+      <img src="wallapers/Little_Boy.webp" alt="Boy" class="rounded-lg">
+      <img src="wallapers/Kids_Snow_Play.webp" alt="Kids" class="rounded-lg">
+      <img src="wallapers/Couples.webp" alt="Couple" class="rounded-lg">
+    </div>
+  </section>
+
+  <section id="art" class="px-6 py-10 bg-gray-800">
+    <h3 class="text-2xl font-semibold mb-6">Art</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <img src="wallapers/Art.webp" alt="Art" class="rounded-lg">
+      <img src="wallapers/Glassy_Fruit.webp" alt="Glassy Fruit" class="rounded-lg">
+      <img src="wallapers/eye.webp" alt="Eye" class="rounded-lg">
+      <img src="wallapers/mirror.webp" alt="Mirror" class="rounded-lg">
+    </div>
+  </section>
+
+  <section id="subscribe" class="px-6 py-10 text-center bg-gray-800">
+    <h3 class="text-3xl font-semibold mb-4">Stay Updated</h3>
+    <p class="text-gray-400 mb-4">Subscribe to get the latest 4K wallpapers in your inbox.</p>
+    <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-4">
+      <input type="email" placeholder="Enter your email" class="px-4 py-2 rounded text-black w-full" required>
+      <button type="submit" class="bg-green-500 px-4 py-2 rounded hover:bg-green-600">Subscribe</button>
+    </form>
+  </section>
+
+  <footer class="text-center py-6 bg-gray-900 text-gray-500">
+    &copy; 2025 4K Wallpapers. All rights reserved.
+  </footer>
+</body>
+</html>
