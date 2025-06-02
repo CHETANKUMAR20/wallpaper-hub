@@ -1,27 +1,24 @@
-name: CI/CD Pipeline
+name: Deploy to Docker
 
 on:
   push:
     branches:
-      - main  # triggers when code is pushed to main branch
+      - master
 
 jobs:
-  build-and-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repository
         uses: actions/checkout@v3
 
       - name: Set up Docker
-        uses: docker/setup-buildx-action@v2
+        uses: docker/setup-buildx-action@v3
 
-      - name: Build Docker image
-        run: docker build -t wallpaper-hub .
+      - name: Build Docker Image
+        run: docker build -t wallpaper-hub ./html
 
-      - name: Run Docker container (optional for test only)
-        run: docker run -d -p 80:80 wallpaper-hub
-
-      - name: Deployment placeholder
-        run: echo "Deploying wallpaper-hub..."
+      - name: List Docker Images
+        run: docker images
 
